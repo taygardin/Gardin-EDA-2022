@@ -90,6 +90,14 @@ density_data <-
   as_tibble()%>%
   print()
   
-species <- c("wolf_density", "cattle_density", "population_density")
+species_densities <- c("wolf_density", "cattle_density", "population_density")
+
+ggplot(data = all_data)+ 
+  geom_jitter(mapping = aes(x= district, 
+                        y = n_wolves,
+                        color= "red"),
+                          alpha = .5)
+
+
 
 
